@@ -121,3 +121,24 @@ a { color: inherit; text-decoration: none; }
   transition: background 0.3s, color 0.3s;
 }
 .pill:hover { background: var(--cream); color: var(--brown); }
+
+/* Phones and small tablets */
+@media (max-width: 768px) {
+  .nav { padding: 24px 20px; font-size: 14px; }
+  .nav-links { gap: 20px; }
+
+  .hero-photo { height: 70%; }
+  .hero-location { display: none; }
+  .hero-title { right: 20px; top: 15%; font-size: 18px; }
+
+  .intro { grid-template-columns: 1fr; gap: 40px; padding: 100px 24px; }
+  .work { padding: 0 24px 100px; }
+  .cards { grid-template-columns: 1fr; }
+
+  .contact {
+    padding: 120px 24px 60px;
+    border-radius: 50% 50% 0 0 / 50px 50px 0 0;
+  }
+  .contact-btn { width: 120px; height: 120px; top: -60px; right: 0; }
+  .contact-pills { margin-top: 100px; }
+}
