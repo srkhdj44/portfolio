@@ -73,7 +73,7 @@ a { color: inherit; text-decoration: none; }
   width: 160px; height: 160px; border-radius: 50%;
   background: var(--brown); color: var(--cream);
   display: grid; place-items: center;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s ease-out;
 }
 .circle-btn:hover { background: var(--red-brown); }
 
@@ -175,4 +175,17 @@ html { scroll-behavior: smooth; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .menu-btn { transform: scale(1); }
+}
+
+/* Fade-in on scroll */
+.reveal {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.in { opacity: 1; transform: none; }
+
+/* Skip the motion for people who turn animations off */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .marquee-track { animation: none; }
 }
