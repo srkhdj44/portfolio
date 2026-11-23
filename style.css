@@ -1,0 +1,55 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #1c1d20; }
+a { color: inherit; text-decoration: none; }
+
+/* Navbar */
+.nav {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+  display: flex; justify-content: space-between;
+  padding: 32px 40px; color: #fff;
+}
+.nav-links { display: flex; gap: 32px; list-style: none; }
+
+/* Hero */
+.hero {
+  position: relative; height: 100vh;
+  background: #999d9e; overflow: hidden;
+}
+.hero-photo {
+  position: absolute; bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  height: 90%; object-fit: contain;
+}
+.hero-location {
+  position: absolute; left: 0; top: 45%;
+  display: flex; align-items: center; gap: 24px;
+  background: #1c1d20; color: #fff; font-size: 14px;
+  padding: 20px 20px 20px 40px;
+  border-radius: 0 999px 999px 0;
+}
+.globe {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #999d9e; display: grid; place-items: center;
+  font-size: 24px;
+}
+.hero-title {
+  position: absolute; right: 10%; top: 40%;
+  color: #fff; font-size: 22px;
+}
+.arrow { display: block; margin-bottom: 40px; }
+
+/* Scrolling name */
+.marquee { position: absolute; bottom: 0; width: 100%; overflow: hidden; }
+.marquee-track {
+  display: flex; width: max-content;
+  animation: scroll 20s linear infinite;
+}
+.marquee h1 {
+  font-size: clamp(80px, 14vw, 230px);
+  font-weight: 400; color: #fff;
+  white-space: nowrap; line-height: 1; letter-spacing: -0.02em;
+}
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
