@@ -142,3 +142,37 @@ a { color: inherit; text-decoration: none; }
   .contact-btn { width: 120px; height: 120px; top: -60px; right: 0; }
   .contact-pills { margin-top: 100px; }
 }
+
+html { scroll-behavior: smooth; }
+
+/* Round menu button */
+.menu-btn {
+  position: fixed; top: 24px; right: 24px; z-index: 100;
+  width: 72px; height: 72px; border-radius: 50%; border: none;
+  background: var(--brown); cursor: pointer;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px;
+  transform: scale(0); transition: transform 0.3s ease;
+}
+.menu-btn.visible { transform: scale(1); }
+.menu-btn span { width: 24px; height: 2px; background: var(--cream); transition: transform 0.3s; }
+.menu-btn.open span:first-child { transform: translateY(4px) rotate(45deg); }
+.menu-btn.open span:last-child  { transform: translateY(-4px) rotate(-45deg); }
+
+/* Slide-out panel */
+.menu-panel {
+  position: fixed; top: 0; right: 0; z-index: 90;
+  width: min(420px, 100%); height: 100vh;
+  background: var(--brown); padding: 140px 60px;
+  display: flex; flex-direction: column; gap: 24px;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.menu-panel.open { transform: translateX(0); }
+.menu-panel a { color: var(--cream); font-size: 48px; }
+.menu-panel a:hover { color: var(--gold); }
+
+/* On phones: hide text links, always show the button */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-btn { transform: scale(1); }
+}
