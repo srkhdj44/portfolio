@@ -11,14 +11,14 @@
 <body>
   <nav class="nav">
     <a href="#" class="logo">© Code by Sara Amazing</a> 
-    <ul class="nav-links">>
+    <ul class="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     </nav>
               
-  <section class="hero"></section>   <!-- photo, title, scrolling name -->
+  <section class="hero">   <!-- photo, title, scrolling name -->
     <img src="images/me.png" alt="Sara Amazing" class="hero-photo">
 
     <div class="hero-location">
@@ -27,7 +27,7 @@
     </div>
 
     <div class="hero-title">
-      <span class="marquee-track"></span>
+      <span class="arrow">↘</span>
         <p>Software Engineering<br>Student</p>
     </div>
 
@@ -40,8 +40,30 @@
   </section>
  
   
-  <section class="intro"></section>  <!-- one-liner + paragraph -->
-  <section class="work"></section>   <!-- project cards -->
+  <section class="intro">  <!-- one-liner + paragraph -->
+    <h2>Hello, I'm Sara!</h2>
+    <div class="intro-right">
+      <p> bla bla bla </p>
+      <a href="#contact" class="circle-btn">About me</a>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="cards">
+      <a class="card" href="https://github.com/srkhdj44/agrovision" target="_blank">
+        <div class="card-img" style="background: #1f3d2b;">
+          <span>Agrovision</span>
+        </div>
+        <h3>Agrovision</h3>
+        <div class="card-meta">
+          <span>One-line description</span>
+          <span>Tech stack</span>
+        </div>
+      </a>
+      <!-- Copy the whole <a class="card">...</a> block for each project -->
+    </div>
+  </section>
+
   <footer class="contact"></footer>  <!-- "Let's work together" -->
   <script src="script.js"></script>
 </body>
